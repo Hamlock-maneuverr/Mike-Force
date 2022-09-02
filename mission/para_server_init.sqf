@@ -107,7 +107,7 @@ vn_site_objects = [];
 // Set desired number of simultaneously active zones.
 vn_mf_targetNumberOfActiveZones = 1;
 // Set number of enemies per player.
-para_g_enemiesPerPlayer = 2;
+para_g_enemiesPerPlayer = 3;
 //Global variable, so it needs syncing across the network.
 publicVariable "para_g_enemiesPerPlayer";
 
@@ -282,7 +282,7 @@ diag_log "VN MikeForce: Initialising Loadbalancer";
 diag_log "VN MikeForce: Initialising AI Objectives";
 // start ai subsystem. Depends on the load balancer subsystem.
 [
-    ["hardAiLimit", ["hard_ai_limit", 80] call BIS_fnc_getParamValue]
+    ["hardAiLimit", ["hard_ai_limit", 95] call BIS_fnc_getParamValue]
 ] call para_s_fnc_ai_obj_subsystem_init;
 
 diag_log "VN MikeForce: Initialising Harass";
